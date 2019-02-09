@@ -1,0 +1,64 @@
+#platform=x86, AMD64, or Intel EM64T
+#version=DEVEL
+# Install OS instead of upgrade
+install
+# X Window System configuration information
+xconfig  --startxonboot
+# Keyboard layouts
+# old format: keyboard us
+# new format:
+keyboard --vckeymap=us --xlayouts='us'
+# Reboot after installation
+reboot
+# Root password
+rootpw --iscrypted $1$9/RoWvEV$YJM4HM2olht2dtjMFn5YX.
+# System timezone
+timezone Asia/Kolkata --ntpservers=ntp.iitb.ac.in
+# Use network installation
+url --url="ftp://ftp.iitb.ac.in/opensource/distributions/fedora/releases/20/Fedora/x86_64/os"
+repo --name=iitb-fedora --baseurl=ftp://ftp.iitb.ac.in/opensource/distributions/fedora/releases/20/Everything/x86_64/os/ --cost=100
+repo --name=iitb-updates --baseurl=ftp://ftp.iitb.ac.in/opensource/distributions/fedora/updates/20/x86_64/ --cost=120
+# System language
+lang en_US --addsupport=hi_IN.UTF-8
+user --groups=wheel --name=admin --password=$6$H5UGKvuo/3H3gc7Q$Ya.jmmY7yMqJkuYNQtDGJpxJe14tQNhvFBjfbg2qRANMJzDI4Q4MtZ8Mh4fRe3gNW6AMzRtrirZaIozLBUsJw/ --iscrypted --gecos="Administrator"
+# Firewall configuration
+firewall --disabled
+# System authorization information
+auth  --useshadow  --passalgo=sha512
+# Use graphical install
+graphical
+# Run the Setup Agent on first boot
+firstboot --enable
+# SELinux configuration
+selinux --disabled
+
+# System services
+services --enabled="chronyd"
+ignoredisk --only-use=sda
+# System bootloader configuration
+bootloader --location=mbr --boot-drive=sda
+# Partition clearing information
+clearpart --none
+# Aero Network
+network  --bootproto=static --device=em1 --gateway=10.101.250.1 --ip=10.101.11.13 --nameserver=10.200.1.11,10.101.1.5,10.200.1. --netmask=255.255.0.0 --noipv6 --activate
+network  --hostname=prithvi.aero.iitb.ac.in
+
+%packages
+@base-x
+@core
+@dial-up
+@firefox
+@fonts
+@gnome-desktop
+@guest-desktop-agents
+@hardware-support
+@input-methods
+@libreoffice
+@multimedia
+@printing
+@standard
+sil-mingzat-fonts
+sil-nuosu-fonts
+tabish-eeyek-fonts
+
+%end
