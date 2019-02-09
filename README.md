@@ -6,7 +6,7 @@ yum install ftp://ftp.iitb.ac.in/opensource/distributions/fedora.old/releases/16
 
 yum install xinetd tftp tftp-server
 
-##Paths
+## Paths
 ```sh
 strider/auto_installs
 shakti/tftpboot/linux-install/pxelinux.cfg
