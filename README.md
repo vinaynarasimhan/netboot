@@ -1,4 +1,4 @@
-# Netboot
+# Netboot :space_invader:
 
 **These are the config files for netboot.**
 
@@ -6,5 +6,9 @@ yum install ftp://ftp.iitb.ac.in/opensource/distributions/fedora.old/releases/16
 
 yum install xinetd tftp tftp-server
 
+>>>
+Paths:
 strider/auto_installs
+
 shakti/tftpboot/linux-install/pxelinux.cfg
+>>>
