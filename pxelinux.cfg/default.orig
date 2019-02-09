@@ -1,0 +1,62 @@
+default local
+timeout 100
+prompt 1
+display msgs/boot.msg
+F1 msgs/boot.msg
+F2 msgs/general.msg
+F3 msgs/expert.msg
+F4 msgs/param.msg
+F5 msgs/rescue.msg
+F7 msgs/snake.msg
+
+label local
+  localboot 1
+
+label 0
+  localboot 1
+
+
+label 1
+  kernel Centos_7_3_64/vmlinuz
+  append initrd=Centos_7_3_64/initrd.img ramdisk_size=16000 ks=http://10.101.1.5/lee/c7m.cfg
+
+
+label 2
+  kernel Centos_7_3_64_Live/vmlinuz0
+  append rootflags=loop initrd=Centos_7_3_64_Live/initrd0.img root=live:/CentOS-7-x86_64-LiveGNOME-1611.iso rootfstype=auto ro rd.live.image quiet  rhgb rd.luks=0 rd.md=0 rd.dm=0
+
+
+label 3
+  kernel Fedora_24/vmlinuz
+  append initrd=Fedora_24/initrd.img ramdisk_size=16000 inst.repo=ftp://ftp.iitb.ac.in/opensource/linux.distributions/fedora/releases/24/Everything/x86_64/os/ inst.ks=http://10.101.1.5/lee/f24.cfg inst.loglevel=debug ip=10.101.1.32::10.101.250.1:255.255.0.0:test.aero.iitb.ac.in:enp0s25:none nameserver=10.101.11.201
+
+
+label 4
+  kernel Win7/memdisk
+  append iso raw initrd=GParted/gparted-live.iso
+
+
+label 5
+  kernel Win7/memdisk
+  append iso raw initrd=Hiren/Hiren.BootCD.iso
+
+
+label 6
+  kernel slax/vmlinuz
+  ipappend 1
+  append initrd=slax/initrfs.img load_ramdisk=1 prompt_ramdisk=0 rw printk.time=0 slax.flags=xmode
+
+
+label 7
+  kernel Ubuntu_16_04_64/linux
+  append tasks=standard pkgsel/language-pack-patterns= pkgsel/install-language-support=false vga=788 initrd=Ubuntu_16_04_64/initrd.gz auto url=http://10.101.1.5/auto_installs/preseed.cfg -- quiet
+
+
+label 8
+  kernel Ubuntu_16_10_64/linux
+  append tasks=standard pkgsel/language-pack-patterns= pkgsel/install-language-support=false vga=788 initrd=Ubuntu_16_10_64/initrd.gz auto url=http://10.101.1.5/auto_installs/preseed.cfg -- quiet
+
+
+label 9
+  kernel Win7/memdisk
+  append iso raw initrd=Win7/winpe.iso

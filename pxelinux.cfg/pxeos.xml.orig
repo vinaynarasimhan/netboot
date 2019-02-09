@@ -1,0 +1,11 @@
+<?xml version="1.0" ?><OperatingSystems>
+     <OS Anonymous="1" Description="Centos 7.3 64 Bit" Diskless="0" Kernel="" Kickstart="http://10.101.1.5/lee/c7m.cfg" Location="/opensource/linux.distributions/centos/7/os/x86_64" Name="Centos_7_3_64" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Centos 7.3 64 bit Live" Diskless="0" Kernel="" Kickstart="" Location="/" Name="Centos_7_3_64_Live" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Fedora 24 64Bit" Diskless="0" Kernel="" Kickstart="http://10.101.1.5/lee/f24.cfg" Location="/opensource/linux.distributions/fedora/releases/24/Workstation/x86_64/os" Name="Fedora_24" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="GParted Live 64 Bit" Diskless="0" Kernel="" Kickstart="" Location="/" Name="GParted" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Hiren" Diskless="0" Kernel="" Kickstart="" Location="/" Name="Hiren" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Slax 7.0.8 64 Bit" Diskless="0" Kernel="" Kickstart="" Location="/" Name="Slax_7_0_8" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Ubuntu 16.04 64 bit" Diskless="0" Kernel="" Kickstart="" Location="/" Name="Ubuntu_16_04_64" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Ubuntu 16.10 64 bit" Diskless="0" Kernel="" Kickstart="" Location="/" Name="Ubuntu_16_10_64" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+     <OS Anonymous="1" Description="Windows 7/8.1/10 Pro 64 bit" Diskless="0" Kernel="" Kickstart="" Location="/" Name="Win_7_81" Password="" Protocol="FTP" Server="ftp.iitb.ac.in" User=""/>
+ </OperatingSystems>

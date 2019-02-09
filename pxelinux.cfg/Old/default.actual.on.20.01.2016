@@ -1,0 +1,67 @@
+default local
+timeout 100
+prompt 1
+display msgs/boot.msg
+F1 msgs/boot.msg
+F2 msgs/general.msg
+F3 msgs/expert.msg
+F4 msgs/param.msg
+F5 msgs/rescue.msg
+F7 msgs/snake.msg
+
+label local
+  localboot 1
+
+label 0
+  localboot 1
+
+
+
+label 1
+  kernel Centos_6_7_64/vmlinuz
+  append initrd=Centos_6_7_64/initrd.img ramdisk_size=16000 ks=http://10.101.1.5/lee/c67m.cfg
+
+
+label 2
+  kernel Centos_6_7_64_Live/vmlinuz
+  append initrd=Centos_6_7_64_Live/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 3
+  kernel Centos_7_2_64/vmlinuz
+  append initrd=Centos_7_2_64/initrd.img ramdisk_size=16000 ks=http://10.101.1.5/lee/c7m.cfg
+
+
+label 4
+  kernel Centos_7_2_64_Live/vmlinuz
+  append initrd=Centos_7_2_64_Live/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 5
+  kernel GParted/vmlinuz
+  append initrd=GParted/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 6
+  kernel Hiren/vmlinuz
+  append initrd=Hiren/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 7
+  kernel Slax_7_0_8/vmlinuz
+  append initrd=Slax_7_0_8/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 8
+  kernel Ubuntu_14_04_64/vmlinuz
+  append initrd=Ubuntu_14_04_64/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 9
+  kernel Ubuntu_15_10_64/vmlinuz
+  append initrd=Ubuntu_15_10_64/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
+
+
+label 10
+  kernel Win_7_81/vmlinuz
+  append initrd=Win_7_81/initrd.img ramdisk_size=0 method=ftp://ftp.iitb.ac.in/ ip=dhcp
